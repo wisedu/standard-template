@@ -15,11 +15,11 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>空模板</title>
 	<script type="text/javascript">
-		var pageMeta = <e:page/>;
+		// var pageMeta = <e:page/>;
 	</script>
 </head>
 <body>
 	<t-空模板></t-空模板>
 </body>
-<script id="turningBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" modules="空模板" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>"></script>
+<script id="turningBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="空模板" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" theme="default"></script>
 </html>

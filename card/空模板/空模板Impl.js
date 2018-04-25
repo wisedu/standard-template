@@ -1,6 +1,6 @@
 (function (exports) {
 	var testDS = window.turning.DataSourceFactory.create();
-	testDS.load("http://res.wisedu.com/fe_components/mock/page_model.json", "TABLE")
+	testDS.load("./modules/aaa.do", "TABLE_QUERY")
 
 	// var emapDS = window.turning.DataSourceFactory.create(pageMeta, "T_PXXX_XSJBXX_QUERY");
 
@@ -9,14 +9,14 @@
 		// note there's no DOM manipulation here at all.
 		methods: {
 			sendTest: function () {
-				testDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
-					console.log(result)
-					debugger
-				});
-				// emapDS.execute(emapDS.actions.find).then(function(result){
+				// emapDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
 				// 	console.log(result)
 				// 	debugger
 				// });
+				testDS.execute(testDS.actions.find).then(function(result){
+					console.log(result)
+					debugger
+				});
 			}
 		}
 	}
