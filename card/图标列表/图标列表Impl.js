@@ -1,8 +1,11 @@
 (function (exports) {
-	var testDS = window.turing.DataAdapterFactory.create();
-	testDS.load("http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json", "hqjxjzlbgsj")
+	var testDS = window.turing.DataSourceFactory.create();
+	testDS.load("./modules/aaa.do", "TABLE_QUERY")
 
-	var 空模板Impl = {
+	// 直接装载pageMeta的方法
+	// var emapDS = window.turing.DataSourceFactory.create(pageMeta, "T_PXXX_XSJBXX_QUERY");
+
+	var 图标列表Impl = {
 		// methods that implement data logic.
 		// note there's no DOM manipulation here at all.
 		methods: {
@@ -25,5 +28,5 @@
 		}
 	}
 
-	exports["空模板"].mixins = [空模板Impl]
+	exports["图标列表"].mixins = [图标列表Impl]
 })(window.turingform);

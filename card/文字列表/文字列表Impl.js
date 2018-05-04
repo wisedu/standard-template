@@ -1,12 +1,10 @@
 (function (exports) {
-	var testDS = window.turing.DataAdapterFactory.create();
-	testDS.load("http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json", "hqjxjzlbgsj")
-
-	var 空模板Impl = {
+	var 文字列表Impl = {
 		// methods that implement data logic.
 		// note there's no DOM manipulation here at all.
 		methods: {
-			sendTest: function () {
+			clickHandler: function () {
+				var testDS = window.turing.DataSource.get("hqjxjzlbgsj");
 				// 发特殊请求的方式
 				// emapDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
 				// 	console.log(result)
@@ -25,5 +23,5 @@
 		}
 	}
 
-	exports["空模板"].mixins = [空模板Impl]
+	exports["文字列表"].mixins = [文字列表Impl]
 })(window.turingform);

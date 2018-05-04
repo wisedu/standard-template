@@ -1,5 +1,5 @@
 (function (exports) {
-	exports['空模板'] = {
+	exports['图标列表'] = {
 		template: '<div><button @click="sendTest">测试发请求数据</button></div>',
 		// app initial state
 		data: function() {
