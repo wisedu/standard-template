@@ -15,11 +15,11 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>文字列表</title>
 	<script type="text/javascript">
-		// var pageMeta = <e:page/>;
+		var pageMeta = <e:page/>;
 	</script>
 </head>
 <body>
 	<t-文字列表></t-文字列表>
 </body>
-<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="文字列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" cache-token="" theme="default" after-js=""></script>
+<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="文字列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/cards/" cache-token="" theme="default" after-js=""></script>
 </html>

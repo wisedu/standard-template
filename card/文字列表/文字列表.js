@@ -1,5 +1,5 @@
 (function (exports) {
-	var hqjxjzlbgsj = new window.turing.DataSource("hqjxjzlbgsj", "http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json");
+	var hqjxjzlbgsj = new window.turing.DataSource("hqjxjzlbgsj", pageMeta);
 	window.turing.DataSource.set(hqjxjzlbgsj);
 
 	exports['文字列表'] = {
