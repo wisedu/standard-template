@@ -1,15 +1,10 @@
 (function (exports) {
-	var testDS = window.turing.DataSourceFactory.create();
-	testDS.load("./modules/aaa.do", "TABLE_QUERY")
-
-	// 直接装载pageMeta的方法
-	// var emapDS = window.turing.DataSourceFactory.create(pageMeta, "T_PXXX_XSJBXX_QUERY");
-
-	var 图标列表Impl = {
-		// methods that implement data logic.
-		// note there's no DOM manipulation here at all.
+	var ClassImpl = {
 		methods: {
-			sendTest: function () {
+			init: function (inst) {
+				inst.DataBind();
+
+				var testDS = window.turing.DataSource.get("hqjxjzlbgsj");//get是从本地缓存中获取模型，不会重新构造对象
 				// 发特殊请求的方式
 				// emapDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
 				// 	console.log(result)
@@ -28,5 +23,5 @@
 		}
 	}
 
-	exports["图标列表"].mixins = [图标列表Impl]
+	exports["图标列表"].mixins = [ClassImpl]
 })(window.turingform);

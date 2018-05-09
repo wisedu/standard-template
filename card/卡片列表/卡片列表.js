@@ -4,19 +4,18 @@
 	var hqjxjzlbgsj = new window.turing.DataSource("hqjxjzlbgsj", "http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json");
 	window.turing.DataSource.set(hqjxjzlbgsj);
 
-	exports['文字列表'] = {
-		template: '<tg-listview :datasource="datasource" bordered autoReadyDataBind>' +
+	exports['卡片列表'] = {
+		template: '<tg-listview :datasource="datasource" :grid="{gutter: 16, column: 3}" autoReadyDataBind>' +
 		    '<template slot="itemTemplate" slot-scope="props">' +
-		        '<tg-div class="tg-col-6">' +
-		            '<tg-text class="tg-primary-1">数据内容{{props.data.JXJLX_DISPLAY}}</tg-text>' +
-		            '<tg-text class="tg-grey-3">行标识{{props.index}}</tg-text>' +
-		        '</tg-div>' +
-		        '<tg-div class="tg-col-3">' +
+		        '<Card style="width:100%">' +
+		            '<p slot="title">' +
+		                '<Icon type="ios-film-outline"></Icon>' +
+		                '<tg-text class="tg-primary-1">主标题{{props.data.JXJLX_DISPLAY}}</tg-text>' +
+		            '</p>' +
+		            '<tg-text class="tg-grey-3">副标题{{props.index}}</tg-text>' +
 		            '<tg-text><Badge count="new" class-name="tg-primary-1 tg-bg-white tg-br-primary-1"></Badge></tg-text>' +
-		        '</tg-div>' +
-		        '<tg-div class="tg-col-3">' +
-		            '<tg-text><tg-linkbutton>Text</tg-linkbutton></tg-text>' +
-		        '</tg-div>' +
+		            '<tg-text><tg-linkbutton @click="sendTest">Text</tg-linkbutton></tg-text>' +
+		        '</Card>' +
 		    '</template>' +
 		'</tg-listview>',
 		// app initial state

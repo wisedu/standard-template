@@ -13,13 +13,13 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<meta charset="UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>文字列表_CN</title>
+	<title>卡片列表_CN</title>
 	<script type="text/javascript">
 		var pageMeta = <e:page/>;
 	</script>
 </head>
 <body>
-	<文字列表></文字列表>
+	<卡片列表></卡片列表>
 </body>
-<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="文字列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/cards/" cache-token="" theme="default" after-js=""></script>
+<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="卡片列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" cache-token="" theme="default" after-js=""></script>
 </html>
