@@ -1,5 +1,5 @@
 (function (exports) {
-	var testDS = window.turing.DataAdapterFactory.create();
+	var testDS = window["tg-turing"].DataAdapterFactory.create();
 	testDS.load("http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json", "hqjxjzlbgsj")
 
 	var ClassImpl = {

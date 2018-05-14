@@ -2,7 +2,7 @@
 	var ClassImpl = {
 		methods: {
 			sendTest: function () {
-				var testDS = window.turing.DataSource.get("hqjxjzlbgsj");//get是从本地缓存中获取模型，不会重新构造对象
+				var testDS = window["tg-turing"].DataSourceManager.get("hqjxjzlbgsj");//get是从本地缓存中获取模型，不会重新构造对象
 				// 发特殊请求的方式
 				// emapDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
 				// 	console.log(result)

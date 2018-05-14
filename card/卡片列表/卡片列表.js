@@ -1,8 +1,8 @@
 (function (exports) {
 	//使用pageMeta获取模型，减少一次网络请求
-	// var hqjxjzlbgsj = new window.turing.DataSource("hqjxjzlbgsj", pageMeta);
-	var hqjxjzlbgsj = new window.turing.DataSource("hqjxjzlbgsj", "http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json");
-	window.turing.DataSource.set(hqjxjzlbgsj);
+	// var hqjxjzlbgsj = new window["tg-turing"].DataSourceManager("hqjxjzlbgsj", pageMeta);
+	var hqjxjzlbgsj = new window["tg-turing"].DataSourceManager("hqjxjzlbgsj", "http://res.wisedu.com/FS/mockdata/hqjxjzlbgsj_model.json");
+	window["tg-turing"].DataSourceManager.set(hqjxjzlbgsj);
 
 	exports['卡片列表'] = {
 		template: '<tg-listview :datasource="datasource" :grid="{gutter: 16, column: 3}" autoReadyDataBind>' +
