@@ -18,7 +18,8 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 		var pageMeta = <e:page/>;
 	</script>
 </head>
-<body>
+<!-- 美化滚动条nicescroll需要尽早隐藏掉真实的滚动条 -->
+<body style="overflow: hidden">
 	<卡片列表></卡片列表>
 </body>
 <script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="卡片列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" cache-token="" theme="default" after-js=""></script>
