@@ -16,7 +16,7 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<title>文字列表_CN</title>
 	<script type="text/javascript">
 		var pageMeta = <e:page/>;
-		window.apiPath="<%=APP_PATH%>/pages/";
+		window.apiPath="<%=APP_PATH%>/cards/";
 		window.TG_CONFIG = {
 			pageName: "文字列表",
 			resServer: "<%=RES_PATH%>",
