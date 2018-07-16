@@ -1,0 +1,16 @@
+<div>
+	<button @click="sendTest">sendTest</button>
+	<tg-listview :data-adapter="da" :grid="{gutter: 16, column: 3}" autoReadyDataBind>
+	    <template slot="itemTemplate" slot-scope="props">
+	        <Card style="width:100%">
+	            <p slot="title">
+	                <Icon type="ios-film-outline"></Icon>
+	                <tg-text class="tg-primary-1">主标题{{props.data.JXJLX_DISPLAY}}</tg-text>
+	            </p>
+	            <tg-text class="tg-grey-3">副标题{{props.index}}</tg-text>
+	            <tg-text><Badge count="new" class-name="tg-primary-1 tg-bg-white tg-br-primary-1"></Badge></tg-text>
+	            <tg-text><tg-linkbutton @click="sendTest">Text</tg-linkbutton></tg-text>
+	        </Card>
+	    </template>
+	</tg-listview>
+</div>

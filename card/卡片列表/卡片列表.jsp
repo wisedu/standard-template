@@ -16,11 +16,26 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<title>卡片列表_CN</title>
 	<script type="text/javascript">
 		var pageMeta = <e:page/>;
+		window.apiPath="<%=APP_PATH%>/pages/";
+		window.TG_CONFIG = {
+			pageName: "卡片列表",
+			resServer: "<%=RES_PATH%>",
+			niceScroll: {},
+			theme: "default",
+			inject: false,
+			router: {
+				'/': '卡片列表'
+			},
+			cacheToken:"",
+			afterJS:[]
+		}
 	</script>
 </head>
 <!-- 美化滚动条nicescroll需要尽早隐藏掉真实的滚动条 -->
 <body style="overflow: hidden">
-	<卡片列表></卡片列表>
+	<div id="page">
+		<router-view></router-view>
+	</div>
 </body>
-<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="卡片列表" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" cache-token="" theme="default" after-js=""></script>
+<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js"></script>
 </html>

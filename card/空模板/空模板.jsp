@@ -15,12 +15,27 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>空模板_CN</title>
 	<script type="text/javascript">
-		// var pageMeta = <e:page/>;
+		var pageMeta = <e:page/>;
+		window.apiPath="<%=APP_PATH%>/pages/";
+		window.TG_CONFIG = {
+			pageName: "空模板",
+			resServer: "<%=RES_PATH%>",
+			niceScroll: {},
+			theme: "default",
+			inject: false,
+			router: {
+				'/': '空模板'
+			},
+			cacheToken:"",
+			afterJS:[]
+		}
 	</script>
 </head>
 <!-- 美化滚动条nicescroll需要尽早隐藏掉真实的滚动条 -->
 <body style="overflow: hidden">
-	<空模板></空模板>
+	<div id="page">
+		<router-view></router-view>
+	</div>
 </body>
-<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js" card-modules="空模板" res-server="<%=RES_PATH%>" api-path="<%=APP_PATH%>/modules/" cache-token="" theme="default" after-js=""></script>
+<script id="turingBoot" src="<%=RES_PATH%>/fe_components/turing-form/turing_loader_v2.js"></script>
 </html>

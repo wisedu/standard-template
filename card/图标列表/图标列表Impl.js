@@ -1,21 +1,25 @@
-(function (exports) {
+(function (exports, turing) {
+	var inst = new turing.DataAdapterFactory.create(pageMeta, "T_FUNA_USER_QUERY");
 	var ClassImpl = {
+		data: function() {
+			return {
+				da:inst
+			}
+		},
 		methods: {
-			init: function (inst) {
-				inst.DataBind();
-
-				var testDS = window["tg-turing"].DataSourceManager.get("hqjxjzlbgsj");//get是从本地缓存中获取模型，不会重新构造对象
+			init: function (list) {
+				list.DataBind({index:1,size:10});
 				// 发特殊请求的方式
 				// emapDS.execute({url:"http://res.wisedu.com/fe_components/mock/table.json", method:"get"}).then(function(result){
 				// 	console.log(result)
 				// 	debugger
 				// });
-				testDS.execute(testDS.actions.find).then(function(result){
+				inst.execute(inst.actions.find).then(function(result){
 					console.log(result)
 					debugger
 				});
 
-				testDS.findAll().then(function(result){
+				inst.findAll().then(function(result){
 					console.log(result)
 					debugger
 				});
@@ -24,4 +28,5 @@
 	}
 
 	exports["图标列表"].mixins = [ClassImpl]
-})(window.turingform);
+})(window.turingform, window["tg-turing"]);
+

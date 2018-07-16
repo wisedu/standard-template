@@ -1,0 +1,12 @@
+<div>
+	<tg-listview :data-adapter="da" :grid="{gutter: 40}" @ready="init"> 
+	    <template slot="itemTemplate" slot-scope="props"> 
+	        <tg-div> 
+	            <Icon type="stop" size="107"></Icon> 
+	        </tg-div> 
+	        <tg-div class="tg-text-center"> 
+	            <tg-text class="tg-primary-1">主标题{{props.data.JXJLX_DISPLAY}}</tg-text> 
+	        </tg-div> 
+	    </template> 
+	</tg-listview>
+</div>
