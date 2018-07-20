@@ -1,7 +1,7 @@
 <%@page import="com.wisedu.emap.mvc.CurrentInfo"%>
 <%@page import="com.wisedu.emap.base.core.EmapContext"%>
 <%@ page import="java.util.*"%>
-<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false"%>
 <%@ taglib uri="/WEB-INF/tags/emap.tld" prefix="e"%>
 <%
 String RES_PATH = EmapContext.getStaticResourceRoot();
