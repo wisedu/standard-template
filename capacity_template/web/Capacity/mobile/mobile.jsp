@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" session="false"%>
+<%@ page import="com.wisedu.emap.mvc.CurrentInfo"%>
 <%@ taglib prefix="e" uri="/WEB-INF/etags/emap.tld"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -12,20 +13,19 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" href="<%=RES_HOST%>/fe_components/turing-form/wisedu-vue.mobile.min.css">
 <link rel="stylesheet" href="./mobile/style.css">
 
 <script type="text/javascript">
-    var contextPath = "<%=request.getContextPath()%>";
-    window.apiPath = APP_PATH + "/Capacity/mobile/";
-    window.TG_CONFIG = {
-        resServer: "<%=RES_HOST%>",
+	var contextPath = "<%=request.getContextPath()%>";
+	window.apiPath = "<%= APP_PATH %>/Capacity/mobile/";
+	window.TG_CONFIG = {
+	    resServer: "<%=RES_HOST%>",
 		router : {
 		},
 		components : [],
 		cacheToken : "",
 		header : {
-			getConfig: contextPath + "/getPermission.do"
+			//getConfig: contextPath + "/getPermission.do"
 		}
 	}
 </script>
@@ -33,7 +33,9 @@ String APP_PATH = request.getContextPath() + "/sys/" + CurrentInfo.getInfo().get
 </head>
 
 <body>
-	<div id="page"></div>
+	<div id="page">
+		<router-view></router-view>
+	</div>
 </body>
 <script type="text/javascript" src="<%=RES_HOST%>/fe_components/turing-form/wisedu-vue.mobile.min.js"></script>
 <script id="turingBoot" src="<%=RES_HOST%>/fe_components/turing-form/turing_loader_Capacity.js"></script>

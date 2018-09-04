@@ -1,6 +1,6 @@
 import route from './private-router.js';
 
-var router = window.TG_RouterExtension(route.routes);
+var router = window.TG_MergePublicRouter(route.routes);
 
 let config = {
     data() {
@@ -13,7 +13,7 @@ let config = {
     },
     router
 };
-
+console.log(config)
 var app = new Vue(config).$mount('#page');
-$('#page').removeClass("__hide");
-$('.app-loading').removeClass('app-loading-show');
+document.querySelector('#page').classList.remove('__hide')
+document.querySelector('.app-loading').classList.remove('app-loading-show')
