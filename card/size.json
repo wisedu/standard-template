@@ -19,4 +19,7 @@
 },{
 	"name": "S1",
 	"description": "高度98px(有标题)和180px(无标题)，占整行的1/4"
+},{
+	"name": "SL1",
+	"description": "高度98px，占整行的1/4"
 }]
