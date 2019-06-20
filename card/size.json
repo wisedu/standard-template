@@ -1,4 +1,7 @@
 [{
+	"name": "XL",
+	"description": "高度560px(有标题)和602px(无标题)，占满整行，仅易表通使用"
+},{
 	"name": "L",
 	"description": "高度433px(有标题)和515px(无标题)，占满整行"
 },{
@@ -21,5 +24,8 @@
 	"description": "高度98px(有标题)和180px(无标题)，占整行的1/4"
 },{
 	"name": "SL1",
-	"description": "高度98px，占整行的1/4"
+	"description": "高度98px，占整行的1/4，仅OA使用"
+},{
+	"name": "XS",
+	"description": "高度52px，占整行，仅易表通使用"
 }]
